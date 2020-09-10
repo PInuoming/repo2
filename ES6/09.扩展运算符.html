@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<div></div>
+		<div></div>
+		<div></div>
+		<script type="text/javascript">
+			// ... 扩展运算符能将 数组 转换为逗号分隔的 参数序列
+			const tfboys = ['易烊千玺', '王源', '王俊凯'];
+			
+			function zhongyi() {
+				console.log(arguments);
+			}
+			zhongyi(...tfboys);
+			
+			// 扩展运算符的运用
+			// 1.数组的合并
+			const xianjian = ['胡歌', '霍建华', '唐嫣'];
+			const kuaiben = ['何炅', '谢娜', '杜海涛'];
+			
+			// const hebing = xianjian.concat(kuaiben);
+			const hebing = [...xianjian, ...kuaiben];
+			console.log(hebing);
+			
+			// 2.数组的克隆
+			const giaoge = ['我', 'giao'];
+			const xiaogiao = [...giaoge];
+			console.log(xiaogiao);
+			
+			// 3.将伪数组转为真正的数组
+			const divs = document.querySelectorAll('div');
+			console.log(divs);// 对象
+			const divArr = [...divs];
+			console.log(divArr);
+			
+		</script>
+	</body>
+</html>

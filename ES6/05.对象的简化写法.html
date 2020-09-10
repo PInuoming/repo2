@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// ES6 允许在大括号里，直接写入变量和函数，作为对象的属性和方法
+			let name = '泫雅';
+			let dance = function() {
+				console.log('跳舞真棒');
+			}
+			// const star = {
+			// 	name: name,
+			// 	dance: dance
+			// }
+			// 简写
+			const star = {
+				name,
+				dance,
+				// skill: function() {
+				// 	console.log('骨盆舞');
+				// }
+				//简写
+				skill() {
+					console.log('骨盆舞');
+				}
+			}
+			console.log(star);
+		</script>
+	</body>
+</html>

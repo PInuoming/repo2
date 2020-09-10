@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 生成器函数是 ES6 提供的一种异步编程解决方案，语法行为和传统函数完全不同
+			// yield 是函数代码的分隔符
+			function * gen() {
+				console.log(111);
+				yield '小猪';
+				console.log(222);
+				yield '罗志祥';
+				console.log(333);
+				yield '时间管理大师';
+				console.log(444);
+			};
+			let iterator = gen();
+			//iterator.next();// 要调用函数就要调用next()方法
+			console.log(iterator.next()); 
+			console.log(iterator.next()); 
+			console.log(iterator.next()); 
+			console.log(iterator.next()); 
+			
+			for(let v of gen()) {
+				console.log(v);
+			}
+			
+		</script>
+	</body>
+</html>

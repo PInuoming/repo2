@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// ES6 提供了数据结构 Map，它类似于对象，也是键值对的集合。但是“键”的范围不限于字符串，各种类型的值（包括对象）都可以当作键，Map实现了 iterator 接口，所以可以使用 扩展运算符 和 for...of 进行遍历
+			
+			// Maps 和 Objects 的区别
+			// 1.一个 Object 的键只能是字符串或者 Symbols，但一个 Map 的键可以是任意值。
+			// 2.Map 中的键值是有序的（FIFO 原则），而添加到对象中的键则不是。
+			// 3.Map 的键值对个数可以从 size 属性获取，而 Object 的键值对个数只能手动计算。
+			// 4.Object 都有自己的原型，原型链上的键名有可能和你自己在对象上的设置的键名产生冲突。
+			
+			// 声明 map
+			let m = new Map();
+			
+			// 添加元素
+			m.set('name', "小明");
+			m.set('say', function() {
+				console.log("大家好，我叫小明");
+			});
+			let key = {
+				star: 'tfboys'
+			};
+			m.set(key, ['易烊千玺', '王源', '王俊凯']);
+			console.log(m);
+			
+			// size --- 元素个数
+			console.log(m.size);
+			
+			// delete --- 删除
+			// m.delete('name');
+			
+			// get --- 获取
+			// console.log(m.get(key));
+			
+			// 清空 --- clear
+			// m.clear();
+			
+			for(let v of m) {
+				console.log(v);
+			}
+		</script>
+	</body>
+</html>

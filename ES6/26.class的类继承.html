@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 父类
+			class Phone {
+				// 构造方法
+				constructor(brand, price) {
+				    this.brand = brand;
+					this.price = price;
+				}
+				// 父类的成员属性
+				call() {
+					console.log("我可以打电话");
+				}
+			}
+			
+			// 继承
+			class SmartPhone extends Phone {
+				// 构造方法
+				constructor(brand, price, color, size) {
+				    super(brand, price);
+					// super 就是父类的 constructor 方法
+					this.color = color;
+					this.size = size;
+				}
+				photo() {
+					console.log("拍照");
+				}
+				play() {
+					console.log("打游戏");
+				}
+				// 子类对父类方法的重写
+				call() {
+					console.log("我可以视频通话");
+				}
+			}
+			
+			// 实例化
+			const xiaomi = new SmartPhone('小米', 999, 'black', '4.7inch');
+			console.log(xiaomi);
+			xiaomi.call();
+		</script>
+	</body>
+</html>

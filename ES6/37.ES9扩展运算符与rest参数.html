@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			function connect({host, port, ...user}) {
+				console.log(host);
+				console.log(port);
+				console.log(user);
+				
+			}
+			connect({
+				host: '127.0.0.1',
+				port: 3000,
+				username: 'root',
+				password: 'root'
+			});
+			
+			
+			const skillOne = {
+				q: '天音波'
+			}
+			const skillTwo = {
+				w: '金钟罩'
+			}
+			const skillThree = {
+				e: '天雷破'
+			}
+			const skillFour = {
+				r: '无影脚'
+			}
+			
+			const liqing = {...skillOne, ...skillTwo, ...skillThree, ...skillFour};
+			console.log(liqing);
+		</script>
+	</body>
+</html>

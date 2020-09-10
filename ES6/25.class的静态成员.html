@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 静态属性：class 本身的属性，即直接定义在类内部的属性（ Class.propname ），不需要实例化。 ES6 中规定，Class 内部只有静态方法，没有静态属性。
+			class Phone {
+				// 静态属性
+				static name = '手机';
+				static change() {
+					console.log("我可以改变世界");
+				}
+			}
+			let nokia = new Phone();
+			console.log(nokia.name);
+			console.log(Phone.name);
+		</script>
+	</body>
+</html>

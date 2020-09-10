@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="module">
+			// ES6模块化语法
+			// 模块功能主要由两个命令构成：export 和 import
+			// export 用于规定模块的对外接口，可以出现在模块的任何位置，但必需处于模块顶层。
+			// import 用于输入其他模块提供的功能，会提升到整个模块的头部，首先执行。
+			
+			// 引入 m1.js 模块内容
+			// 1. 通用导入方式
+			// import * as m1 from "./js/m1.js";
+			// console.log(m1);
+			
+			// 引入 m2.js 模块内容
+			// import * as m2 from "./js/m2.js";
+			// console.log(m2);
+			
+			// 引入 m3.js 模块内容
+			// import * as m3 from "./js/m3.js";
+			// console.log(m3);
+			// m3.default.change();
+			
+			// 2.解构赋值形式
+			// import {school, teach} from "./js/m1.js";
+			// console.log(school);
+			// console.log(teach);
+			// school 跟 m1的冲突了，就使用别名
+			// import {school as guigu, findJob} from "./js/m2.js";	
+			// console.log(guigu);
+			// console.log(findJob);
+			// 默认暴露的固定写法
+			// import {default as m3} from "./js/m3.js";
+			// console.log(m3); 
+			
+			
+			// 3.简便形式（针对默认暴露）
+			// import m3 from "./js/m3.js";
+			// console.log(m3);
+		</script>
+		<!-- 有兼容性问题 -->
+		<!-- <script src="js/app.js" type="module"></script> -->
+		
+		<!-- 对ES6模块化代码转换 -->
+		<!-- 
+		1.HBX可以直接用插件转换
+		2.转换完之后要打包才能使用，我们用browserify打包
+		npx browserify js/app-compiled.js -o js/bundle.js -->
+		<!-- <script src="js/bundle.js"></script> -->
+		
+		<!-- ES6 模块引入 NPM 包 -->
+		<!-- 案例：引入 jQuery 包，改变背景颜色 -->
+		<!-- 1.安装包 --- npm i jQuery -->
+		<!-- 2.到入口文件app.js 导入jquery包，修改颜色-->
+		<!-- 3.转换 -->
+		<!-- 4.打包 -->
+		<script src="js/bundle2.js"></script>
+	</body>
+</html>

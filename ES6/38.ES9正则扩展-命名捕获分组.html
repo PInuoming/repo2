@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		
+		<script type="text/javascript">
+			// 提取 url 和 标签文本
+			// let str = '<a href="http://www.baidu.com">百度</a>'
+			// 分组提取
+			// let reg = /<a href="(.*)">(.*)<\/a>/;
+			// const result = reg.exec(str);
+			// console.log(result[1]);
+			// console.log(result[2]);
+			
+			// 提取 url 和 标签文本
+			// 加 ?<字符>
+			let str = '<a href="http://www.baidu.com">百度</a>'
+			let reg = /<a href="(?<url>.*)">(?<text>.*)<\/a>/;
+			const result = reg.exec(str);
+			console.log(result);
+			console.log(result.groups.url);
+			console.log(result.groups.text);
+		</script>
+	</body>
+</html>

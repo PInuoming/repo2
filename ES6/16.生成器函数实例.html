@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 1s 后控制台输出 111，2s 后输出 222,3s后输出 333
+			function one() {
+				setTimeout(function() {
+					console.log(111);
+					iterator.next();
+				},1000);
+			};
+			function two() {
+				setTimeout(function() {
+					console.log(222);
+					iterator.next();
+				},2000);
+			};
+			function three() {
+				setTimeout(function() {
+					console.log(333);
+					iterator.next();
+				},3000);
+			};
+			function * gen() {
+				yield one();
+				yield two();
+				yield three();
+			};
+			let iterator = gen();
+			iterator.next();
+		</script>
+	</body>
+</html>

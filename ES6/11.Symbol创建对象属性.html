@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 向对象中添加方法 up down
+			let game = {
+				
+			}
+			let methods = {
+				up: Symbol(),
+				down: Symbol()
+			};
+			game[methods.up] = function() {
+				console.log("上升");
+			}
+			game[methods.down] = function() {
+				console.log("下降");
+			}
+			console.log(game);
+			
+			
+			let youxi = {
+				name: "狼人杀",
+				[Symbol('say')]: function() {
+					console.log("我要发言");
+				},
+				[Symbol('kill')]: function() {
+					console.log("我要杀人");
+				}
+			}
+			console.log(youxi);
+		</script>
+	</body>
+</html>

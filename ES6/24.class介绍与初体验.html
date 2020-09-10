@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// ES5 使用构造函数
+			// function Phone(brand, price) {
+			// 	this.brand = brand;
+			// 	this.price = price;
+			// }
+			// Phone.prototype.call = function() {
+			// 	console.log("我可以打电话");
+			// }
+
+			// let Huawei = new Phone('华为', 4999);
+			// Huawei.call();
+			// console.log(Huawei);
+			
+			// ES6 使用class实现
+			class Phone{
+				// 构造方法
+				constructor(brand, price) {
+				    this.brand = brand;
+					this.price = price;
+				}
+				// 方法必须使用该语法
+				call() {
+					console.log("我可以打电话");
+				}
+			}
+			let onePlus = new Phone("1+", 3999);
+			console.log(onePlus);
+		</script>
+	</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// ES6 引入 rest 参数，用于获取函数的实参，用来代替 argments
+			// ES5 获取实参的方式
+			// function star() {
+			// 	console.log(arguments);
+			// }
+			// 此时返回的是对象
+			// star('胡歌', '霍建华', '罗志祥');
+			
+			
+			// rest 参数
+			// rest 参数必须放在参数最后
+			function star(a, b, ...args) {
+				console.log(a);
+				console.log(b);
+				console.log(args);
+			}
+			// 此时返回的args是数组，即可使用数组的一些API
+			star('三吉彩花', '周杰伦', '林俊杰', '薛之谦', 'Aimer');
+		</script>
+	</body>
+</html>

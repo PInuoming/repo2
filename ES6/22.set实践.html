@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			let arr = [1, 2, 1, 4, 7, 4, 8, 5, 9];
+			let arr2 = [4, 8, 6, 0, 5, 7, 3, 8, 6];
+			// 1.数组去重
+			let result = [...new Set(arr)];
+			console.log(result);
+
+			// 2.交集
+			let result2 = new Set(arr2);
+			let intersect = new Set(result.filter(item => result2.has(item)));
+			console.log(intersect);
+			
+			// 3.并集
+			let union = new Set([...result,...result2]);
+			console.log(union);
+			
+			// 4.差集
+			let difference = new Set(result.filter(item => !result2.has(item)));
+			console.log(difference);
+		</script>
+	</body>
+</html>

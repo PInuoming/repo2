@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 1.Number.EPSILON
+			// Number.EPSILON 属性表示 1 与大于 1 的最小浮点数之间的差,是JS的最小精度。
+			// 它的值接近于 2.2204460492503130808472633361816E-16，或者 2-52。
+			console.log(0.1 + 0.2); // 0.30000000000000004
+			console.log(0.1 + 0.2 === 0.3); // false
+			// 解决方法
+			function equal(a, b) {
+				if(Math.abs(a - b) < Number.EPSILON) {
+					return true;
+				} else {
+					return false;
+				}
+			}
+			console.log(equal(0.1 + 0.2, 0.3))
+			
+			// 2.二进制新写法：0b或0B
+			let b = 0b1010;
+			console.log(b);
+			// 八进制新写法：0o或0O
+			let o = 0o777;
+			console.log(o);
+			// 十六进制
+			let x = 0xff;
+			console.log(x);
+			
+			// 3.Number.isFinite --- 检测是否为有限数
+			console.log(Number.isFinite(100));
+			console.log(Number.isFinite(100/0));
+			console.log(Number.isFinite(Infinity)); // Infinity --- 无穷
+			
+			// 4.Number.isNaN --- 检测是否为NaN
+			console.log(Number.isNaN(123));
+			
+			// 5.Number.parseInt和Number.parseFloat 字符串转为数字
+			console.log(Number.parseInt('5201314love'));
+			console.log(Number.parseFloat('3.1415926哈哈'));
+			
+			// 6.Number.isInteger --- 判断是否为整数
+			console.log(Number.isInteger(10));
+			console.log(Number.isInteger(1.8));
+			
+			// 7.Math.trunc --- 将数字的小数部分抹掉
+			console.log(Math.trunc(3.114));
+			
+			// 8.Math.sign --- 判断是正数 负数 还是0
+			console.log(Math.sign(0));   // 0
+			console.log(Math.sign(-5));  // -1
+			console.log(Math.sign(10));  // 1
+			
+			// Math 对象的扩展
+			// ES6 在 Math 对象上新增了 17 个数学相关的静态方法，这些方法只能在 Math 中调用。
+			// 详情看 https://www.runoob.com/w3cnote/es6-number.html
+		</script>
+	</body>
+</html>
